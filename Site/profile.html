@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>UniShare</title>
+  <link rel="stylesheet" href="style_registo.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+</head>
+<body>
+
+<html>
+<head>
+  <title>Sobre Nós</title>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:100,200,400,600' rel='stylesheet' type='text/css'>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/parallax-theme/assets/animate.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style_registo.css">
+</head>
+
+<body style="background-color: rgb(0, 0, 0); color: rgb(0, 0, 0);">
+  <div class="nav-header">
+    <div class="nav-brand"></div>
+    <i class="fa fa-bars fa-3x"></i>
+    <div class="header-links">
+      <ul>
+        <li><a href="profile.html">Perfil</a></li> 
+        <li><a href="entrar.html">Entrar</a></li>
+        <li><a href="index.html">Mais...</a></li>
+        <!--<li><a href="registo.html">Registar</a></li>-->
+        <li><a href="">UniShare</a></li>
+        <li><a href="forum.html">Fórum</a></li>
+        <li><a href="index.html">HOME</a></li> 
+      </ul>
+      <input type="text" id="search-bar" placeholder="Pesquisar...">
+    </div>
+  </div>
+
+  <div id="fullpage">
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <div class="section inicio" data-anchor="inicio">
+        <img src="fotos/_f8b6b561-ab1a-4d14-b685-a0b006fc9823-removebg-preview.png" class="logo">
+        <div class="opaque-bg animated fadeInDown">
+          <h1 style="color:rgb(255, 255, 255)">UniShare - Perfil<span style="color:#000000"></span></h1>
+          <br>
+          
+          
+          <p><span id="holder"></span><span class="blinking-cursor">Desliza para baixo para personalizar o teu perfil|</span></p>
+        </div>
+        <i id="moveDown" class="fa fa-chevron-down fa-3x bounce"></i>
+      </div>
+
+  </div>
+
+  <!-- Elementos adicionais para foto de perfil, username, primeiro e último nome -->
+  <div class="section profile-section" data-anchor="profile">
+    <h2>Foto de Perfil</h2>
+    <input type="file" id="upload-photo" style="display:none;" accept="image/*">
+
+    <label for="upload-photo" class="upload-btn">Carregar Foto</label>
+    <!-- Círculo para a foto de perfil -->
+    <div class="profile-picture-container">
+      <img id="profile-picture" src="fotos/silhueta_pfp.png" alt="Foto de Perfil">
+    </div>
+    <h3 style="color:white">Username</h3>
+    <h3 style="color:white">--</h3>
+    <h3 style="color:white">Primeiro Nome</h3>
+    <h3 style="color:white">--</h3>
+    <h3 style="color:white">Último Nome</h3>
+    <h3 style="color:white">--</h3>
+    <!-- Aba das universidades -->
+    <div class="dropdown">
+      <button class="dropbtn">Insira a sua Universidade</button>
+      <div class="dropdown-content">
+        <a href="#">Universidade de Lisboa</a>
+        <a href="#">Universidade do Porto</a>
+        <a href="#">Universidade de Coimbra</a>
+        <a href="#">Universidade Nova de Lisboa</a>
+        <a href="#">Universidade de Aveiro</a>
+        <a href="#">Universidade do Minho</a>
+        <a href="#">Universidade de Évora</a>
+        <a href="#">Universidade de Trás-os-Montes e Alto Douro</a>
+        <a href="#">Universidade de Beira Interior</a>
+        <a href="#">Universidade da Madeira</a>
+        <a href="#">Universidade dos Açores</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

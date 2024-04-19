@@ -1,0 +1,798 @@
+
+/* general styles */
+
+body {
+    font-family: 'Raleway', sans-serif !important;
+  }
+
+  ul
+  {
+      list-style-type: none;
+  }
+
+  a {
+    text-decoration: none !important;
+  }
+
+  h1 {
+    color: #fbfcfc;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 20px;
+    color: #484848;
+  }
+
+  .section {
+    text-align: center;
+    
+  }
+  .quemsomos .content h1 {
+    margin-top: 100px; /* Adjust this margin value as needed */
+    
+  }
+
+  .skillbar {
+    cursor: pointer;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .display {
+    display: block;
+  }
+
+
+  
+
+  .flash-container {
+    width: 100%;
+    position: fixed;
+    z-index: 700;
+    padding-top: 20px;
+    font-weight: bold;
+  }
+
+  .alert {
+    text-align: center !important;
+    width: 500px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    color: #211809 !important;
+  }
+
+
+
+  .nav-screen {
+    height: 100%;
+    z-index: 500;
+    position: fixed;
+    background-color: #000;
+    opacity: 1;
+     right: -285px; 
+    -webkit-font-smoothing: antialiased;
+    position: fixed;
+    width: 285px;
+  }
+
+  .nav-screen .active {
+    display: block;
+  }
+
+
+
+  .nav-brand {
+    position: fixed;
+    left: 0;
+    z-index: 500;
+    padding: 10px;
+  }
+
+  .nav-brand img {
+    width: 50px;
+  }
+
+  .fa-bars {
+    display: none !important;
+    color: #213d56;
+    float: right;
+    padding: 20px;
+    position: fixed;
+    right: 0;
+    z-index: 500;
+    cursor: pointer;
+  }
+
+  .fa-times {
+    color: #23384a;
+    float: right;
+    padding: 20px;
+    right: 0;
+    z-index: 600;
+    cursor: pointer;
+  }
+
+  .header-links {
+    position: fixed;
+    left: 400px;
+    top: 25px;
+    z-index: 800;
+  }
+  /* Adicione esses estilos ao seu arquivo styles.css ou onde você estiver definindo os estilos */
+
+/* Estilos para a barra de pesquisa */
+.header-links {
+  display: flex; /* Usa flexbox para alinhar os itens */
+  justify-content: flex-end; /* Alinha os itens à direita */
+  align-items: center; /* Centraliza verticalmente os itens */
+}
+
+#search-bar {
+  background-color: rgba(255, 255, 255, 0); /* Cor do fundo com transparência */
+  color: rgba(0, 0, 0, 0.7); /* Cor do texto com transparência */
+  border: none; /* Remove a borda */
+  padding: 15px 12px; /* Espaçamento interno */
+  border-radius: 30px; /* Borda arredondada */
+  top: 10px;
+  margin-left: 40px; /* Adiciona um pequeno espaçamento à esquerda */
+}
+
+#search-bar::placeholder {
+  color: rgba(0, 0, 0, 0.7); /* Cor do texto do espaço reservado com transparência */
+}
+
+  .header-links li {
+    color: white;
+    display: inline;
+    float: right;
+    padding: 15px;
+    font-size: 20px;
+  }
+
+  .header-links a {
+    color: #000000;
+  } 
+
+  .header-links a:hover {
+    color: #ffffff !important;
+  }
+
+  
+
+  .nav-container {
+    padding-top: 10%;
+  }
+
+  .nav-links {
+    width: 250px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .nav-links ul {
+    margin-top: 15%;
+    text-align: center;
+    padding-top: 10%;
+  }
+Z
+
+  .nav-links a {
+    color: #FFFFFF;
+    font-size: 30px;
+    line-height: 2.5;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .nav-links a:hover {
+    color: #ffffff;
+    -webkit-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+    -ms-transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+  }
+
+  #fp-nav ul li .fp-tooltip {
+    color: #000000 !important;
+  }
+
+
+  .header-links a::after {
+    display: block;
+      margin: 0 auto;
+    margin-top: 5px;
+    width: 0;
+      height: 2px;
+      background-color: #ffffff;
+      content: '';
+    opacity: 0;
+    -webkit-transition: width 0.6s, opacity 0.8s;
+    -moz-transition: width 0.6s, opacity 0.8s;
+    transition: width 0.6s, opacity 0.8s;
+  }
+
+  .header-links a:hover::after,
+  .header-links a:focus::after {
+    opacity: 1;
+    width: 100%;
+  }
+
+
+.logo{
+  width: 20%;
+  padding: 100px 1px 5px 5px;
+}
+
+
+  .opaque-bg {
+
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 380px;
+    padding: 1% 1px 5px 5px;
+  }
+
+  .inicio {
+
+    background-color: #000000;
+    
+  }
+
+  .inicio p {
+    color: white;
+    font-weight: 100;
+    font-size: 17.4px;
+  }
+
+  .sobrenos {
+
+    background-color: #000000;
+    
+  }
+
+  .sobrenos p {
+    color: white;
+    font-weight: 100;
+    font-size: 17.4px;
+    
+  }
+
+  
+
+
+  .fa-chevron-down {
+    color: #ffffff !important;
+    bottom: 30px;
+    margin-left: -30px;
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+
+  }
+
+
+  @-webkit-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      -webkit-transform: translateY(0);
+      transform: translateX(0);
+    }
+    40% {
+      -webkit-transform: translateY(-30px);
+      transform: translateY(-30px);
+    }
+    60% {
+      -webkit-transform: translateY(-15px);
+      transform: translateY(-15px);
+    }
+  }
+
+  @-moz-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      -ms-transform: translateY(0);
+      transform: translateY(0);
+    }
+    40% {
+      -ms-transform: translateY(-30px);
+      transform: translateY(-30px);
+    }
+    60% {
+      -ms-transform: translateY(-15px);
+      transform: translateY(-15px);
+    }
+  }
+
+  .bounce {
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+  }
+
+
+
+  .content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    padding: 1px 10px;
+  }
+
+  .content-slide {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+  }
+
+  .content-slide img {
+    width: 70%;
+  }
+
+  .fp-controlArrow.fp-next {
+    border-color: transparent transparent transparent #337ab7 !important;
+    right: 45px !important;
+  }
+
+  .fp-controlArrow.fp-prev {
+    border-color: transparent #337ab7 transparent transparent !important;
+    left: 45px !important;
+  }
+
+  #fp-nav ul li a span, .fp-slidesNav ul li a span{
+    background: rgba(0, 0, 0, 0.62) !important;
+  }
+
+
+
+  .fa-paper-plane {
+    color: #484848;
+  }
+
+
+  .plane-animated {
+    animation-duration: 6s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+  }
+
+  .fa-paper-plane:hover {
+  animation-play-state: running;
+}
+
+    @keyframes shake {
+    0%, 100% {transform: translateX(0);}
+    10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+    20%, 40%, 60%, 80% {transform: translateX(10px);}
+  }
+    .shake {
+      animation-name: shake;
+    }
+
+
+
+
+
+  .footer {
+    background-color: #484848;
+    height: 100px;
+    padding-top: 10px;
+  }
+
+  .footer p{
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .social-links a{
+    color: #484848;
+    padding: 0px 5px 0px 5px;
+  }
+
+  .social-links a:hover {
+    color: #337ab7;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+
+
+
+  @media (min-width: 100px) and (max-width: 500px) {
+
+    .fa-bars {
+      display: block !important;
+    }
+
+    .header-links {
+      display: none;
+    }   
+  }
+
+
+
+  @media (min-width: 100px) and (max-width: 400px) {
+
+    .content {
+      max-width: 300px;
+    }
+
+    .sobrenos h1 {
+      font-size: 28px;
+    }
+  }
+
+
+  /* Mobile Styles */
+/* These styles apply to devices with a width up to 767px */
+@media (max-width: 767px) {
+  /* Adjust the logo size for smaller screens */
+  .logo {
+    width: 35%;
+    padding: 50px 1px 5px 5px;
+  }
+
+  /* Adjust font sizes for smaller screens */
+  h1 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 10px;
+  }
+
+  /* Hide the bars icon and display the header links vertically */
+  .fa-bars {
+    display: none !important;
+  }
+
+  .header-links {
+    position: relative;
+    top: 0;
+    left: 0;
+    float: none;
+    width: 40%;
+    text-align: center;
+    margin-top: 100px;
+  }
+
+  .header-links li {
+    display: block;
+    padding: 10px 0;
+  }
+
+  .header-links a {
+    font-size: 10px;
+  }
+}
+
+/* Tablet Styles */
+/* These styles apply to devices with a width between 768px and 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Add tablet-specific styles here */
+}
+
+/* Desktop Styles */
+/* These styles apply to devices with a width of 1024px and above */
+@media (min-width: 1024px) {
+  /* Add desktop-specific styles here */
+}
+
+
+.button-container {
+  text-align: center;
+  margin-top: 0px; /* Adjust margin as needed */
+}
+
+.sub-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  margin-top: -20px; /* Adjust margin as needed */
+}
+
+.sub-buttons.visible {
+  opacity: 1;
+}
+
+.sub-button {
+ 
+  margin: 0 20px; /* Add margin for space */
+  width: 10px; /* Adjust width as needed */
+}
+
+
+
+.sub-button.visible {
+  display: inline-block;
+}
+
+/* Add the provided styles for .button-19 */
+.button-19 {
+  appearance: button;
+  background-color: #2a557b;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 25px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  margin: 0 10px; /* Add margin for space */
+  white-space: nowrap;
+  width: 70%;
+}
+
+.button-19:after {
+  background-clip: padding-box;
+  background-color: #2785a4;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.button-19:main,
+.button-19:focus {
+  user-select: auto;
+}
+
+.button-19:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.button-19:disabled {
+  cursor: auto;
+}
+
+.button-19:active {
+  border-width: 4px 0 0;
+  background: none;
+}
+
+.card {
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  width: 100%; /* Adjust width as needed */
+  height: 480px; /* Adjust height as needed */
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: cover; /* Ensures the image covers the entire container */
+}
+
+
+.image-container img:hover {
+  filter: brightness(70%);
+}
+
+.author,
+.published-time,
+.newsroom {
+  position: absolute;
+  color: white;
+  z-index: 1; /* Ensure text is above the image */
+  opacity: 1;
+  transition: opacity 0.3s ease; /* Apply transition for opacity */
+}
+
+.author {
+  top: 10px;
+  left: 10px;
+  font-size: 20px;
+}
+
+.published-time {
+  top: 40px;
+  left: 10px;
+  font-size: 10px;
+}
+
+.newsroom {
+  bottom: 10px;
+  left: 10px;
+  font-size: 30px;
+}
+
+.image-container .author,
+.image-container .published-time,
+.image-container .newsroom {
+  opacity: 1; /* Keep the text visible */
+}
+
+#fox-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+#fox {
+  position: absolute;
+  bottom: -200px; /* Start the fox below the viewport */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0; /* Initially hide the fox */
+  transition: opacity 1s, bottom 1s; /* Apply transition effect */
+}
+
+.show {
+  opacity: 1; /* Show the fox */
+  bottom: 0; /* Bring the fox up */
+}
+
+input[type="email"],
+input[type="password"] {
+    border-radius: 5px;
+}
+
+input[type="email"],
+input[type="password"] {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+input[type="email"],
+input[type="password"] {
+    font-size: 16px;
+}
+
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+}
+
+input[type="email"],
+input[type="password"] {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#chat-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#chat-messages {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#message-input {
+  width: calc(100% - 70px);
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para a barra de rolagem vertical */
+#chat-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+#chat-messages::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 3px;
+}
+
+#chat-messages::-webkit-scrollbar-track {
+  background-color: #f9f9f9;
+}
+
+/* Estilos para a lista de tópicos */
+#topics {
+  list-style-type: none;
+  padding: 0;
+}
+
+#topics li {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#topics h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#topics p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+#topics button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#topics button:hover {
+  background-color: #0056b3;
+}
