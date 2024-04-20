@@ -5,22 +5,19 @@
   <title>UniShare</title>
   <link rel="stylesheet" href="style_registo.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    /* Estilo para ocultar a barra de botões ao rolar para baixo */
+    .hidden {
+      transform: translateY(-100%);
+      transition: transform 0.3s ease;
+    }
 
+    .visible {
+      transform: translateY(0);
+      transition: transform 0.3s ease;
+    }
+  </style>
 </head>
-<body>
-
-<html>
-<head>
-  <title>Sobre Nós</title>
-  <link href='https://fonts.googleapis.com/css?family=Raleway:100,200,400,600' rel='stylesheet' type='text/css'>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/parallax-theme/assets/animate.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style_registo.css">
-</head>
-
 <body style="background-color: rgb(0, 0, 0); color: rgb(0, 0, 0);">
   <div class="nav-header">
     <div class="nav-brand"></div>
@@ -48,14 +45,11 @@
     <br>
     <br>
 
-
     <div class="section inicio" data-anchor="inicio">
         <img src="fotos/_f8b6b561-ab1a-4d14-b685-a0b006fc9823-removebg-preview.png" class="logo">
         <div class="opaque-bg animated fadeInDown">
           <h1 style="color:rgb(255, 255, 255)">UniShare - Perfil<span style="color:#000000"></span></h1>
           <br>
-          
-          
           <p><span id="holder"></span><span class="blinking-cursor">Desliza para baixo para personalizar o teu perfil|</span></p>
         </div>
         <i id="moveDown" class="fa fa-chevron-down fa-3x bounce"></i>
@@ -66,37 +60,66 @@
   <!-- Elementos adicionais para foto de perfil, username, primeiro e último nome -->
   <div class="section profile-section" data-anchor="profile">
     <h2>Foto de Perfil</h2>
-    <input type="file" id="upload-photo" style="display:none;" accept="image/*">
+    <input type="file" id="upload-photo" style="display:none;" accept="image/*" onchange="handleFileSelect(event)">
 
-    <label for="upload-photo" class="upload-btn">Carregar Foto</label>
     <!-- Círculo para a foto de perfil -->
     <div class="profile-picture-container">
       <img id="profile-picture" src="fotos/silhueta_pfp.png" alt="Foto de Perfil">
     </div>
+    <label for="upload-photo" class="upload-btn">Carregar Foto</label>
     <h3 style="color:white">Username</h3>
-    <h3 style="color:white">--</h3>
+    <h3 style="color:white">pensamentosloucos</h3>
     <h3 style="color:white">Primeiro Nome</h3>
-    <h3 style="color:white">--</h3>
+    <h3 style="color:white">Claudio</h3>
     <h3 style="color:white">Último Nome</h3>
-    <h3 style="color:white">--</h3>
+    <h3 style="color:white">André</h3>
+
     <!-- Aba das universidades -->
-    <div class="dropdown">
-      <button class="dropbtn">Insira a sua Universidade</button>
-      <div class="dropdown-content">
-        <a href="#">Universidade de Lisboa</a>
-        <a href="#">Universidade do Porto</a>
-        <a href="#">Universidade de Coimbra</a>
-        <a href="#">Universidade Nova de Lisboa</a>
-        <a href="#">Universidade de Aveiro</a>
-        <a href="#">Universidade do Minho</a>
-        <a href="#">Universidade de Évora</a>
-        <a href="#">Universidade de Trás-os-Montes e Alto Douro</a>
-        <a href="#">Universidade de Beira Interior</a>
-        <a href="#">Universidade da Madeira</a>
-        <a href="#">Universidade dos Açores</a>
+    <div class="universidades-dropdown">
+      <button class="expand-btn">Insira a sua Universidade</button>
+      <div class="options-container">
+        <ul class="options-list">
+          <li>Universidade de Lisboa</li>
+          <li>Universidade do Porto</li>
+          <li>Universidade de Coimbra</li>
+          <li>Universidade Nova de Lisboa</li>
+          <li>Universidade de Aveiro</li>
+          <li>Universidade do Minho</li>
+          <li>Universidade de Évora</li>
+          <li>Universidade da Beira Interior</li>
+          <li>Universidade de Trás-os-Montes e Alto Douro</li>
+          <li>Universidade da Madeira</li>
+          <li>Universidade dos Açores</li>
+          <li>Instituto Politécnico de Lisboa</li>
+          <li>Instituto Politécnico do Porto</li>
+          <li>Instituto Politécnico de Coimbra</li>
+          <li>Instituto Politécnico de Leiria</li>
+          <li>Instituto Politécnico de Setúbal</li>
+          <li>Instituto Politécnico de Santarém</li>
+          <li>Instituto Politécnico de Beja</li>
+          <li>Instituto Politécnico de Bragança</li>
+          <li>Instituto Politécnico de Castelo Branco</li>
+          <li>Instituto Politécnico de Portalegre</li>
+          <li>Instituto Politécnico de Viana do Castelo</li>
+          <li>Instituto Politécnico de Guarda</li>
+          <li>Instituto Politécnico de Tomar</li>
+          <li>Instituto Politécnico de Viseu</li>
+          <li>Instituto Politécnico de Braga</li>
+        </ul>
+        
       </div>
+      <br>
+      <br>
+      <button class="save-btn">Salvar</button>
     </div>
   </div>
 
+  <div id="popup-container">
+    <div id="popup" class="hidden">
+      <p style="color:white">Alterações Guardadas</p>
+    </div>
+  </div>
+  <!-- Script para chamar a função setupDropdown() após o carregamento do documento -->
+  <script src="profile.js"></script>
 </body>
 </html>
