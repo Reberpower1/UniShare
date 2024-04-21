@@ -1,16 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
   <title>UniShare</title>
-  <link rel="stylesheet" href="style_forum.css">
+  
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
-</head>
 <body>
 
 <html>
-<head>
   <title>Sobre Nós</title>
   <link href='https://fonts.googleapis.com/css?family=Raleway:100,200,400,600' rel='stylesheet' type='text/css'>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.css" rel="stylesheet" type="text/css">
@@ -18,11 +15,10 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/parallax-theme/assets/animate.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style_forum.css">
+  <link rel="stylesheet" type="text/css" href="driveficheiros.css">
 </head>
 <body>
 
-    
   <div class="nav-header">
     <div class="nav-brand">
     </div>
@@ -30,41 +26,76 @@
       <div class="header-links">
         <!-- Adicionar a barra de pesquisa aqui -->
         <ul>
-          <li><a href="loja.html" id="loja-link">Loja</a></li>
-
-          <li><a href="profile.html">Perfil</a></li> 
-          <li><a href="entrar.html">Entrar</a></li>
-
-          <!--<li><a href="registo.html">Registar</a></li>-->
+          <li><a href="profile.html">Perfil</a></li>
+          <li><a href="indexB.html">UniShare</a></li>
           <li><a href="forum.html">Fórum</a></li>
-          <li><a href="index.html">UniShare</a></li>
-         
         </ul>
-
       </div>
   </div>
   
-
-  
-
 <div id="fullpage">
 
   <div id="fullpage">
 
     <!-- Secção inicial -->
-    <div class="section inicio" data-anchor="inicio">
-      <img src="fotos/_f8b6b561-ab1a-4d14-b685-a0b006fc9823-removebg-preview.png" class="logo">
+    <div class="section inicio inicio-section" data-anchor="inicio">
+      <img src="" class="logo">
       <div class="opaque-bg animated fadeInDown">
-        <h1 style="color:rgb(255, 255, 255)">UniShare<span style="color:#000000"></span></h1>
+        <h1 style="color:rgb(255, 255, 255)">Repositório de Análise Matemática I<span style="color:#000000"></span></h1>
         <br>
-        <p>Discute um tópico aqui</p>
+        <p><span id="holder"></span><span class="blinking-cursor"></span></p>
       </div>
       <i id="moveDown" class="fa fa-chevron-down fa-3x bounce"></i>
+        <div class="black-bar"></div>
     </div>
+  
+<!-- FICHEIROS -->
+<style>
 
+  .ficheiro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ficheiro h1 {
+    text-align: center;
     
-    
+    margin: 0;
+    padding: 0;
+}
 
+  .file-list {
+      list-style-type: none;
+      padding: 0;
+  }
+
+  .file-list li {
+      margin: 15px 0;
+      width: 85%;
+      padding: 10px;
+      border: 2px solid #000000;
+      border-radius: 15px;
+      font-size: 20px;
+      color: #000000;
+      background-color: #ffffff;
+  }
+
+  .file-list li:hover {
+      background-color: #f0f0f0;
+  }
+</style>
+<div class="section" data-anchor="ficheiros">
+    <div class="ficheiro">
+      <h1>Ficheiros 1º Ano</h1>
+      <ul class="file-list">
+        <li><i class="fa fa-file-pdf-o"></i> <a href="file1.pdf">Folha1.pdf</a></li>
+        <li><i class="fa fa-file-pdf-o"></i> <a href="file2.pdf">Folha1_Solucoes.pdf</a></li>
+        <li><i class="fa fa-file-pdf-o"></i> <a href="file3.pdf">Freq1_2022_23.pdf</a></li>
+        <li><i class="fa fa-file-code-o"></i> <a href="file4.py">Apontamentos.pdf</a></li>
+        <li><i class="fa fa-file-powerpoint-o"></i> <a href="file5.pptx">Slides_Aulas.pptx</a></li>
+    </ul>
+  </div>
+</div>
 
 <!-- Biblioteca jquerry e outros-->
 
@@ -73,7 +104,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js"></script>
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<script src="portugal.js"></script>
-<script src="./script.js"></script>
+<script src="driveficheiros.js"></script>
+<script src="./driveficheiros.css"></script>
 </body>
 </html>

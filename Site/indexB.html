@@ -17,30 +17,31 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/parallax-theme/assets/animate.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="indexB.css">
 </head>
 <body>
 
   <div class="nav-header">
-    <div class="nav-brand">
-    </div>
+    <div class="nav-brand"></div>
     <i class="fa fa-bars fa-3x"></i>
-      <div class="header-links">
-        <!-- Adicionar a barra de pesquisa aqui -->
-        <ul>
-          <li style="margin-left: 50px;"><a>Olá, Cláudio</a><img style="width: 50px; height: 50px;border-radius: 50%; margin-left: 5%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-0jvkvvXsv-I-Ljs8K7vBEaMEnh8ryoLQVE1QtBU7ZA&s"></li>
-          <li><a href="profile.html">Perfil</a></li> 
-          <!--<li><a href="registo.html">Registar</a></li>-->
-          <li><a href="forum.html">Fórum</a></li>
-          <li><a href="index.html">UniShare</a></li>
-        </ul>
-        <input type="text" id="search-bar" placeholder="Pesquisar...">
+    <div class="header-links" style="margin-left: auto;"> <!-- Ajuste o estilo aqui -->
+      <ul>
+        <li><a href="loja.html" id="loja-link">Loja</a></li>
+        <li><a href="profile.html">Perfil</a></li> 
+        <!--<li><a href="registo.html">Registar</a></li>-->
+        <li><a href="forum.html">Fórum</a></li>
+        <li><a href="index.html">UniShare</a></li>
+        <li id="user-info" style="display: flex; align-items: center;">
+          <img id="profile-pic" style="width: 50px; height: 50px; border-radius: 50%; margin-right: 10px;" src="">
+          <span id="welcome-message"></span>
+        </li>
+      </ul>
+    </div>
   </div>
   
 <div id="fullpage">
 
   <div id="fullpage">
-
     <!-- Secção inicial -->
     <div class="section inicio" data-anchor="inicio">
       <img src="fotos/_f8b6b561-ab1a-4d14-b685-a0b006fc9823-removebg-preview.png" class="logo">
@@ -85,12 +86,27 @@
 
 <!-- Biblioteca jquerry e outros-->
 
+
+
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $.get('/user', function(user) {
+      $('#profile-pic').attr('src', 'Server/' + user.profilePic);
+      $('#welcome-message').text(user.user);
+    }).fail(function() {
+      console.error('Error: ' + textStatus + ' - ' + errorThrown);
+      window.location.href = '/index.html'; // Redirect to login page if not logged in
+    });
+  });
+  </script>
 <script src="https://s3-us-west-2.amazonaws.com/parallax-theme/assets/wow.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js"></script>
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script src="portugal.js"></script>
 <script src="./script.js"></script>
+<!-- Utilizar informações da Sessão-->
 </body>
 </html>

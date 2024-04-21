@@ -30,6 +30,8 @@ body {
     background-image: url('fotos/UCPOLOI.jpg'); /* Substitua pelo caminho para a sua imagem */
     background-size: cover; /* Faz a imagem cobrir toda a área da seção */
     background-position: center; /* Centraliza a imagem */
+    height: 400px;
+    position:relative;
   }
 
   .black-bar {
@@ -40,11 +42,28 @@ body {
     height: 80%;
 
   }
+  .wallpaper {
+    background-image: url('fotos/fundo_web.jpg'); /* Substitua 'wallpaper.jpg' pelo caminho do seu wallpaper */
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh - 400px); /* Altura restante da tela */
+    position: relative; /* Adicionei para que .content fique posicionado corretamente */
+}
+  .content {
+    padding: 20px;
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
   .section{
     text-align: center;
     border-top: none;
   }
+  
   .quemsomos .content h1 {
     margin-top: 100px; /* Adjust this margin value as needed */
     
@@ -134,7 +153,7 @@ body {
 
   .header-links {
     position: fixed;
-    left: 400px;
+    left:39.5%;
     top: 25px;
     z-index: 800;
   }
@@ -142,6 +161,14 @@ body {
 
 /* Estilos para a barra de pesquisa */
 .header-links {
+  display: flex; /* Usa flexbox para alinhar os itens */
+  justify-content: flex-end; /* Alinha os itens à direita */
+  align-items: center; /* Centraliza verticalmente os itens */
+}
+
+/* Estilos para a barra de pesquisa */
+.header-links {
+  position: center;
   display: flex; /* Usa flexbox para alinhar os itens */
   justify-content: flex-end; /* Alinha os itens à direita */
   align-items: center; /* Centraliza verticalmente os itens */
@@ -170,7 +197,7 @@ body {
   }
 
   .header-links a {
-    color: #000000;
+    color: #ffffff;
   } 
 
   .header-links a:hover {
@@ -292,7 +319,7 @@ Z
     cursor: pointer;
     position: absolute;
     z-index: 1;
-    opacity: 0;
+    opacity: 1;
 
   }
 
@@ -825,7 +852,7 @@ article {
     transition: transform 0.4s ease-in-out;
   }
   
-  .article-body .readmore {
+  .article-body{
     padding: 24px;
     position: relative;
     bottom: 10px;
@@ -935,3 +962,6 @@ article {
     white-space: nowrap; 
     width: 1px;
   }
+
+
+  

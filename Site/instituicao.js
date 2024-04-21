@@ -68,27 +68,6 @@ $(document).ready(function() {
       navigationTooltips: ['INÍCIO', 'MAPA', 'CONTACTOS'],
       menu: '#myMenu',
       fitToSection: false,
-  
-      afterLoad: function ( anchorLink, index){
-        var loadedSection = $(this);
-  
-  
-        if(index==1){
-          //dar efeito à seta
-          $('.fa-chevron-down').each(function(){
-            $(this).css('opacity','1')
-          });
-          $('.header-links a').each(function(){
-            $(this).css('color','white')
-          });
-        }
-  
-        else if(index!=1){
-          $('.header-links a').each(function(){
-            $(this).css('color','black')
-          });
-        }  
-      }
     });
     
   
@@ -178,15 +157,7 @@ $(document).ready(function() {
   
 // Adicione este código ao final do seu script.js ou dentro do bloco <script> no final do seu HTML
 
-$(document).ready(function() {
-  // Adiciona um evento de escuta para a tecla Enter na barra de pesquisa
-  $('#search-bar').keypress(function(event){
-    if(event.keyCode == 13){ // 13 é o código da tecla Enter
-      // Captura o texto digitado na barra de pesquisa
-      var searchText = $(this).val();
-      // Aqui você pode implementar a lógica para realizar a pesquisa com o texto capturado
-      // Por exemplo, redirecionar para uma página de resultados de pesquisa
-      window.location.href = "resultados_pesquisa.html?query=" + searchText;
-    }
-  });
-});
+
+
+
+

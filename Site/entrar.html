@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sobre Nós</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="entrar.css">
   <link href='https://fonts.googleapis.com/css?family=Raleway:100,200,400,600' rel='stylesheet' type='text/css'>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -13,36 +13,56 @@
 </head>
 <body>
 
-<div class="nav-header">
-    <div class="nav-brand">
-    </div>
-    <i class="fa fa-bars fa-3x"></i>
-    <div class="header-links">
-        <ul>
-            <li><a href="index.html">Mais...</a></li>
-            <li><a href="registo.html">Registar</a></li>
-            <li><a href="entrar.html">Entrar</a></li>
-            <li><a href="">UniShare</a></li>
-            <li><a href="forum.html">Fórum</a></li>
-            <li><a href="index.html">HOME</a></li>
-        </ul>
-    </div>
-</div>
-
-<div id="fullpage">
-    <!-- Formulário de entrada -->
-    <div class="section inicio" data-anchor="entrar">
-        <img src=" " class="logo">
-        <div class="opaque-bg animated fadeInDown">
-            <div class="content">
-                    <h1>Entrar</h1>
-                    <input type="email" name="email" placeholder="Email" required><br><br>
-                    <input type="password" name="password" placeholder="Senha" required><br><br>
-                    <input type="submit" value="Entrar">
-            </div>
-            </div>
+    <div class="nav-header">
+        <div class="nav-brand">
         </div>
-        <i id="moveDown" class="fa fa-chevron-down fa-3x bounce"></i>
+        <i class="fa fa-bars fa-3x"></i>
+          <div class="header-links">
+            <!-- Adicionar a barra de pesquisa aqui -->
+            <ul>
+              <li><a href="loja.html" id="loja-link">Loja</a></li>
+    
+              <li><a href="profile.html">Perfil</a></li> 
+              <li><a href="entrar.html">Entrar</a></li>
+    
+              <!--<li><a href="registo.html">Registar</a></li>-->
+              <li><a href="forum.html">Fórum</a></li>
+              <li><a href="index.html">UniShare</a></li>
+             
+            </ul>
+
+          </div>
+      </div>
+
+      
+      
+    <div id="fullpage">
+
+        
+    
+      <div id="fullpage">
+        
+        <!-- Secção inicial -->
+        <div class="section inicio" data-anchor="inicio">
+        <h1 style="color:rgb(255, 255, 255)">UniShare - Login<span style="color:#000000" class="texto2"></span></h1>
+          <img src="fotos/_f8b6b561-ab1a-4d14-b685-a0b006fc9823-removebg-preview.png" class="logo">
+          <div class="opaque-bg animated fadeInDown">
+
+            <br>
+          </div>
+        </div> 
+        
+    
+
+        <div class="login-form">
+            <form action="/entrar" method="post">
+                <input type="username" name="user" placeholder="Username" required><br><br>
+                <input type="password" name="password" placeholder="Password" required><br><br>
+                <input type="submit" value="Entrar">
+            </form>
+            <p>Ainda não tens conta? <a href="registo.html">Regista-te</a></p>
+            
+        </div>
     </div>
 
     <!-- CONTATOS --> 
@@ -55,6 +75,7 @@
 <script src="https://s3-us-west-2.amazonaws.com/parallax-theme/assets/wow.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js"></script>
+<script src="./script.js"></script>
 
 </body>
 </html>

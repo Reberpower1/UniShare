@@ -24,12 +24,23 @@ body {
     color: #484848;
   }
 
+  .profile-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px; /* Defina a largura e a altura para o mesmo valor para criar um quadrado */
+    height: 50px;
+    background-size: cover; /* Isso fará com que a imagem do perfil preencha todo o contêiner */
+    background-position: center; /* Isso fará com que a imagem do perfil seja centralizada no contêiner */
+    border-radius: 50%; /* Isso fará com que o contêiner (e, portanto, a imagem do perfil) apareça como um círculo */
+  }
+
   .section {
     text-align: center;
     
   }
   .quemsomos .content h1 {
-    margin-top: 100px; /* Adjust this margin value as needed */
+    margin-top: 50; /* Adjust this margin value as needed */
     
   }
 
@@ -114,10 +125,24 @@ body {
     z-index: 600;
     cursor: pointer;
   }
+  .nav-header {
+    display: flex;
+    justify-content: space-between; /* Alinha os elementos à esquerda e à direita */
+    align-items: center; /* Centraliza verticalmente os elementos */
+  }
+  
+  .header-links ul {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente os elementos */
+  }
+  
+  .header-links input {
+    margin-left: auto; /* Move a barra de pesquisa para a direita */
+  }
 
   .header-links {
     position: fixed;
-    left: 32.5%;
+    left: 37.5%;
     top: 25px;
     z-index: 800;
   }
@@ -758,48 +783,9 @@ button:hover {
   background-color: #f9f9f9;
 }
 
-/* Estilos para a lista de tópicos */
-#topics {
-  list-style-type: none;
-  padding: 0;
-}
-
-#topics li {
-  background-color: #f9f9f9;
-  border-radius: 5px;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#topics h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-#topics p {
-  font-size: 16px;
-  color: #333;
-  margin-bottom: 15px;
-}
-
-#topics button {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 3px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#topics button:hover {
-  background-color: #0056b3;
-}
 
 #loja-link {
   color: green !important;
   font-weight: bold;
 }
-
 

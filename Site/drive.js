@@ -18,8 +18,7 @@ $(document).ready(function() {
     })(jQuery);
   
     // texto para o estilo "máquina de escrever"
-    $("#holder").writeText("Uma Dúvida por dia, nem sabes o bem que te fazia!");
-    
+    $("#holder").writeText("Repositório de conteúdos ");
   
     new WOW().init();
       
@@ -69,27 +68,6 @@ $(document).ready(function() {
       navigationTooltips: ['INÍCIO', 'MAPA', 'CONTACTOS'],
       menu: '#myMenu',
       fitToSection: false,
-  
-      afterLoad: function ( anchorLink, index){
-        var loadedSection = $(this);
-  
-  
-        if(index==1){
-          //dar efeito à seta
-          $('.fa-chevron-down').each(function(){
-            $(this).css('opacity','1')
-          });
-          $('.header-links a').each(function(){
-            $(this).css('color','white')
-          });
-        }
-  
-        else if(index!=1){
-          $('.header-links a').each(function(){
-            $(this).css('color','black')
-          });
-        }  
-      }
     });
     
   
@@ -179,56 +157,7 @@ $(document).ready(function() {
   
 // Adicione este código ao final do seu script.js ou dentro do bloco <script> no final do seu HTML
 
-$(document).ready(function() {
-  // Adiciona um evento de escuta para a tecla Enter na barra de pesquisa
-  $('#search-bar').keypress(function(event){
-    if(event.keyCode == 13){ // 13 é o código da tecla Enter
-      // Captura o texto digitado na barra de pesquisa
-      var searchText = $(this).val();
-      // Aqui você pode implementar a lógica para realizar a pesquisa com o texto capturado
-      // Por exemplo, redirecionar para uma página de resultados de pesquisa
-      window.location.href = "resultados_pesquisa.html?query=" + searchText;
-    }
-  });
-});
 
 
-// Adicione este script no final do seu arquivo HTML ou em um arquivo JavaScript separado
 
-// Função para fazer uma requisição AJAX para o servidor ao fazer login
-function fazerLogin() {
-  const user = document.getElementById('user').value; // Id do campo de usuário
-  const senha = document.getElementById('senha').value; // Id do campo de senha
 
-  // Requisição AJAX para o servidor
-  $.post("/entrar", { user: user, senha: senha }, function (data, status) {
-    if (status === 'success') {
-      // Atualizar a página com os dados recebidos do servidor
-      document.getElementById('welcome-message').innerHTML = `<a>Olá, ${data.user}</a>`;
-      document.getElementById('profile-pic').src = data.profilePic;
-    } else {
-      alert("Erro ao fazer login!");
-    }
-  });
-}
-
-fetch('/entrar', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify({
-    // dados de login, como usuário e senha
-  })
-})
-.then(response => response.json())
-.then(data => {
-  // Atualizar a foto de perfil
-  document.getElementById('profile-pic').src = data.profilePic;
-
-  // Atualizar o nome do usuário
-  document.getElementById('welcome-message').textContent = `Bem-vindo, ${data.user}!`;
-})
-.catch(error => {
-  console.error('Erro ao obter informações do usuário:', error);
-});

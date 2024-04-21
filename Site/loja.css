@@ -24,6 +24,12 @@ body {
     color: #484848;
   }
 
+  .profile-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
   .section {
     text-align: center;
     
@@ -758,48 +764,19 @@ button:hover {
   background-color: #f9f9f9;
 }
 
-/* Estilos para a lista de tópicos */
-#topics {
-  list-style-type: none;
-  padding: 0;
-}
-
-#topics li {
-  background-color: #f9f9f9;
-  border-radius: 5px;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#topics h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-#topics p {
-  font-size: 16px;
-  color: #333;
-  margin-bottom: 15px;
-}
-
-#topics button {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 3px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#topics button:hover {
-  background-color: #0056b3;
-}
 
 #loja-link {
   color: green !important;
   font-weight: bold;
 }
 
-
+.green-card {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .black-card {
+    background-color: #000000;
+    color: white;
+  }
+  

@@ -24,12 +24,18 @@ p {
   color: #484848;
 }
 
+.profile-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
 .section {
   text-align: center;
   
 }
 .quemsomos .content h1 {
-  margin-top: 100px; /* Adjust this margin value as needed */
+  margin-top: 50; /* Adjust this margin value as needed */
   
 }
 
@@ -61,7 +67,7 @@ p {
   width: 500px !important;
   margin-left: auto !important;
   margin-right: auto !important;
-  color: #ffffff !important;
+  color: #211809 !important;
 }
 
 
@@ -70,7 +76,7 @@ p {
   height: 100%;
   z-index: 500;
   position: fixed;
-  background-color: #ffffff;
+  background-color: #000;
   opacity: 1;
    right: -285px; 
   -webkit-font-smoothing: antialiased;
@@ -97,7 +103,7 @@ p {
 
 .fa-bars {
   display: none !important;
-  color: #ffffff;
+  color: #213d56;
   float: right;
   padding: 20px;
   position: fixed;
@@ -107,7 +113,7 @@ p {
 }
 
 .fa-times {
-  color: #ffffff;
+  color: #23384a;
   float: right;
   padding: 20px;
   right: 0;
@@ -117,7 +123,7 @@ p {
 
 .header-links {
   position: fixed;
-  left: 400px;
+  left: 32.5%;
   top: 25px;
   z-index: 800;
 }
@@ -132,7 +138,7 @@ align-items: center; /* Centraliza verticalmente os itens */
 
 #search-bar {
 background-color: rgba(255, 255, 255, 0); /* Cor do fundo com transparência */
-color: rgba(255, 255, 255, 0.7); /* Cor do texto com transparência */
+color: rgba(0, 0, 0, 0.7); /* Cor do texto com transparência */
 border: none; /* Remove a borda */
 padding: 15px 12px; /* Espaçamento interno */
 border-radius: 30px; /* Borda arredondada */
@@ -141,11 +147,11 @@ margin-left: 40px; /* Adiciona um pequeno espaçamento à esquerda */
 }
 
 #search-bar::placeholder {
-color: rgba(255, 255, 255, 0.7); /* Cor do texto do espaço reservado com transparência */
+color: rgba(0, 0, 0, 0.7); /* Cor do texto do espaço reservado com transparência */
 }
 
 .header-links li {
-  color: rgb(0, 0, 0);
+  color: white;
   display: inline;
   float: right;
   padding: 15px;
@@ -200,7 +206,7 @@ Z
 }
 
 #fp-nav ul li .fp-tooltip {
-  color: #ffffff !important;
+  color: #000000 !important;
 }
 
 
@@ -253,7 +259,7 @@ padding: 100px 1px 5px 5px;
 
 .sobrenos {
 
-  background-color: #ffffff;
+  background-color: #000000;
   
 }
 
@@ -355,7 +361,7 @@ padding: 100px 1px 5px 5px;
 }
 
 #fp-nav ul li a span, .fp-slidesNav ul li a span{
-  background: rgba(255, 255, 255, 0.62) !important;
+  background: rgba(0, 0, 0, 0.62) !important;
 }
 
 
@@ -759,142 +765,8 @@ background-color: #f9f9f9;
 }
 
 
-/* Estilo para o círculo da foto de perfil */
-.profile-picture-container {
-width: 150px;
-height: 150px;
-border-radius: 50%;
-overflow: hidden;
-margin: 20px auto;
-background-color: #ccc; /* Cor de fundo padrão */
+#loja-link {
+color: green !important;
+font-weight: bold;
 }
 
-/* Estilo para a imagem da foto de perfil */
-.profile-picture-container img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-object-position: center;
-}
-
-/* Estilo para o botão de upload */
-.upload-btn {
-display: block;
-width: 150px;
-height: 40px;
-line-height: 40px;
-background-color: #007bff;
-color: #fff;
-text-align: center;
-cursor: pointer;
-margin: 10px auto; /* Ajuste a margem conforme necessário */
-border-radius: 20px;
-}
-
-.dropdown-content {
-max-height: 200px; /* Altura máxima da lista de opções */
-overflow-y: auto; /* Adiciona barra de rolagem vertical quando o conteúdo excede a altura máxima */
-padding-right: 20px; /* Adiciona um espaçamento para a barra de rolagem não sobrepor o conteúdo */
-}
-
-.section {
-margin-bottom: 200px; /* Adiciona espaçamento entre as seções */
-}
-
-.universities-dropdown {
-  position: relative;
-  width: 200px; /* Largura do dropdown */
-}
-
-.expand-btn {
-  width: 30%;
-  padding: 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-.options-container {
-  display: none;
-  position: relative;
-  top: calc(100% + 100px);
-  left: 35%;
-  width: 30%;
-  max-height: 200px;
-  overflow-y: auto; /* Adiciona uma barra de rolagem vertical quando necessário */
-  background-color: #f9f9f9;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  text-align:center;
-}
-
-.options-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.options-list li {
-  padding: 10px;
-  cursor: pointer;
-}
-
-.options-list li:hover {
-  background-color: #ddd;
-}
-
-/* Adiciona um estilo ao botão de mudança de seleção */
-.change-selection-btn {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 5px 10px;
-  cursor: pointer;
-  margin-left: 10px;
-}
-
-.change-selection-btn:hover {
-  background-color: #0056b3;
-}
-
-.save-btn {
-  font-family: "Arial";
-  font-size: 16px;
-  display: block;
-  width: 150px;
-  height: 40px;
-  line-height: 20px;
-  background-color: #007bff;
-  color: #fff;
-  text-align: center;
-  cursor: pointer;
-  margin: 10px auto; /* Ajuste a margem conforme necessário */
-  border-radius: 20px;
-}
-
-#popup-container {
-  position: fixed;
-  bottom: 17%; /* Posição vertical fixa */
-  left: 75%; /* Posição horizontal centrada */
-  transform: translateX(-50%); /* Centraliza horizontalmente */
-}
-
-#popup {
-  font-family: "Arial";
-  font-size: 16px;
-  width: 150px;
-  height: 40px;
-  line-height: 20px;
-  background-color: #007bff;
-  color: white;
-  text-align: center;
-  margin: 10px auto; /* Ajuste a margem conforme necessário */
-  border-radius: 20px;
-}
-
-.hidden {
-  display: none;
-}

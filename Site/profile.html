@@ -5,47 +5,55 @@
   <title>UniShare</title>
   <link rel="stylesheet" href="style_registo.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <style>
-    /* Estilo para ocultar a barra de botões ao rolar para baixo */
-    .hidden {
-      transform: translateY(-100%);
-      transition: transform 0.3s ease;
-    }
 
-    .visible {
-      transform: translateY(0);
-      transition: transform 0.3s ease;
-    }
-  </style>
+  <title>Sobre Nós</title>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:100,200,400,600' rel='stylesheet' type='text/css'>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/parallax-theme/assets/animate.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style_registo.css">
+
+
 </head>
 <body style="background-color: rgb(0, 0, 0); color: rgb(0, 0, 0);">
   <div class="nav-header">
-    <div class="nav-brand"></div>
-    <i class="fa fa-bars fa-3x"></i>
-    <div class="header-links">
-      <ul>
-        <li><a href="profile.html">Perfil</a></li> 
-        <li><a href="entrar.html">Entrar</a></li>
-        <li><a href="index.html">Mais...</a></li>
-        <!--<li><a href="registo.html">Registar</a></li>-->
-        <li><a href="">UniShare</a></li>
-        <li><a href="forum.html">Fórum</a></li>
-        <li><a href="index.html">HOME</a></li> 
-      </ul>
-      <input type="text" id="search-bar" placeholder="Pesquisar...">
+    <div class="nav-brand">
     </div>
+    <i class="fa fa-bars fa-3x"></i>
+      <div class="header-links">
+        <!-- Adicionar a barra de pesquisa aqui -->
+        <ul>
+          <li><a href="loja.html" id="loja-link">Loja</a></li>
+
+          <li><a href="profile.html">Perfil</a></li> 
+          <li><a href="entrar.html">Entrar</a></li>
+
+          <!--<li><a href="registo.html">Registar</a></li>-->
+          <li><a href="forum.html">Fórum</a></li>
+          <li><a href="index.html">UniShare</a></li>
+         
+        </ul>
+
+      </div>
   </div>
+
 
   <div id="fullpage">
 
     <br>
     <br>
     <br>
-    <br>
-    <br>
-    <br>
 
     <div class="section inicio" data-anchor="inicio">
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <br>
+        <br>
         <img src="fotos/_f8b6b561-ab1a-4d14-b685-a0b006fc9823-removebg-preview.png" class="logo">
         <div class="opaque-bg animated fadeInDown">
           <h1 style="color:rgb(255, 255, 255)">UniShare - Perfil<span style="color:#000000"></span></h1>
@@ -54,72 +62,115 @@
         </div>
         <i id="moveDown" class="fa fa-chevron-down fa-3x bounce"></i>
       </div>
-
+      
   </div>
 
-  <!-- Elementos adicionais para foto de perfil, username, primeiro e último nome -->
-  <div class="section profile-section" data-anchor="profile">
-    <h2>Foto de Perfil</h2>
-    <input type="file" id="upload-photo" style="display:none;" accept="image/*" onchange="handleFileSelect(event)">
-
-    <!-- Círculo para a foto de perfil -->
-    <div class="profile-picture-container">
-      <img id="profile-picture" src="fotos/silhueta_pfp.png" alt="Foto de Perfil">
-    </div>
-    <label for="upload-photo" class="upload-btn">Carregar Foto</label>
-    <h3 style="color:white">Username</h3>
-    <h3 style="color:white">pensamentosloucos</h3>
-    <h3 style="color:white">Primeiro Nome</h3>
-    <h3 style="color:white">Claudio</h3>
-    <h3 style="color:white">Último Nome</h3>
-    <h3 style="color:white">André</h3>
-
-    <!-- Aba das universidades -->
-    <div class="universidades-dropdown">
-      <button class="expand-btn">Insira a sua Universidade</button>
-      <div class="options-container">
-        <ul class="options-list">
-          <li>Universidade de Lisboa</li>
-          <li>Universidade do Porto</li>
-          <li>Universidade de Coimbra</li>
-          <li>Universidade Nova de Lisboa</li>
-          <li>Universidade de Aveiro</li>
-          <li>Universidade do Minho</li>
-          <li>Universidade de Évora</li>
-          <li>Universidade da Beira Interior</li>
-          <li>Universidade de Trás-os-Montes e Alto Douro</li>
-          <li>Universidade da Madeira</li>
-          <li>Universidade dos Açores</li>
-          <li>Instituto Politécnico de Lisboa</li>
-          <li>Instituto Politécnico do Porto</li>
-          <li>Instituto Politécnico de Coimbra</li>
-          <li>Instituto Politécnico de Leiria</li>
-          <li>Instituto Politécnico de Setúbal</li>
-          <li>Instituto Politécnico de Santarém</li>
-          <li>Instituto Politécnico de Beja</li>
-          <li>Instituto Politécnico de Bragança</li>
-          <li>Instituto Politécnico de Castelo Branco</li>
-          <li>Instituto Politécnico de Portalegre</li>
-          <li>Instituto Politécnico de Viana do Castelo</li>
-          <li>Instituto Politécnico de Guarda</li>
-          <li>Instituto Politécnico de Tomar</li>
-          <li>Instituto Politécnico de Viseu</li>
-          <li>Instituto Politécnico de Braga</li>
-        </ul>
-        
+<br>
+<br>
+<br>
+<br>
+<br>
+<!-- Secção da streak -->
+<div class="section streak-section" data-anchor="streak">
+  <h2>Streak</h2>
+  <div class="streak-container">
+    <img src="fotos/png-transparent-apple-color-emoji-fire-symbol-fire-letter-flame-illustration-orange-computer-wallpaper-emoticon-removebg-preview.png" alt="Chama" width="100">
+    <br>
+    <br>
+    <p style="color: white"><span id="holder"></span><span class="blinking-cursor">Tens vindo a contribuir para a comunidade há 4 dias</span></p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <div style="margin-right: 20px;">
+        <h3 style="color: white; text-align: center;">A tua tag</h3>
+        <!-- Tag correspondente do cliente -->
+        <p style="color:orange"><span id="holder"></span><span class="blinking-cursor">Super Ajudante</span></p>
       </div>
-      <br>
-      <br>
-      <button class="save-btn">Salvar</button>
+      <div style="margin-left: 20px;">
+        <h3 style="color: white; text-align: center;">Os teus créditos</h3>
+        <!-- Créditos correspondentes do cliente -->
+        <p style="color: blue"><span id="holder"></span><span class="blinking-cursor">1034 tokens</span></p>
+      </div>
     </div>
   </div>
+</div>
 
-  <div id="popup-container">
-    <div id="popup" class="hidden">
-      <p style="color:white">Alterações Guardadas</p>
-    </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+<!-- Elementos adicionais para foto de perfil, username, primeiro e último nome -->
+<div class="section profile-section" data-anchor="profile">
+  <h2>Foto de Perfil</h2>
+  <input type="file" id="upload-photo" style="display:none;" accept="image/*" onchange="handleFileSelect(event)">
+
+  <!-- Círculo para a foto de perfil -->
+  <div class="profile-picture-container">
+    <img id="profile-picture" src="fotos/silhueta_pfp.png" alt="Foto de Perfil">
   </div>
-  <!-- Script para chamar a função setupDropdown() após o carregamento do documento -->
-  <script src="profile.js"></script>
+  <label for="upload-photo" class="upload-btn">Carregar Foto</label>
+  <h3 style="color:white">Username</h3>
+  <h3 style="color:white">pensamentosloucos</h3>
+  <h3 style="color:white">Primeiro Nome</h3>
+  <h3 style="color:white">Claudio</h3>
+  <h3 style="color:white">Último Nome</h3>
+  <h3 style="color:white">André</h3>
+
+  <!-- Aba das universidades -->
+  <div class="universidades-dropdown">
+    <button class="expand-btn">Insira a sua Universidade</button>
+    <div class="options-container">
+      <ul class="options-list">
+        <li>Universidade de Lisboa</li>
+        <li>Universidade do Porto</li>
+        <li>Universidade de Coimbra</li>
+        <li>Universidade Nova de Lisboa</li>
+        <li>Universidade de Aveiro</li>
+        <li>Universidade do Minho</li>
+        <li>Universidade de Évora</li>
+        <li>Universidade da Beira Interior</li>
+        <li>Universidade de Trás-os-Montes e Alto Douro</li>
+        <li>Universidade da Madeira</li>
+        <li>Universidade dos Açores</li>
+        <li>Instituto Politécnico de Lisboa</li>
+        <li>Instituto Politécnico do Porto</li>
+        <li>Instituto Politécnico de Coimbra</li>
+        <li>Instituto Politécnico de Leiria</li>
+        <li>Instituto Politécnico de Setúbal</li>
+        <li>Instituto Politécnico de Santarém</li>
+        <li>Instituto Politécnico de Beja</li>
+        <li>Instituto Politécnico de Bragança</li>
+        <li>Instituto Politécnico de Castelo Branco</li>
+        <li>Instituto Politécnico de Portalegre</li>
+        <li>Instituto Politécnico de Viana do Castelo</li>
+        <li>Instituto Politécnico de Guarda</li>
+        <li>Instituto Politécnico de Tomar</li>
+        <li>Instituto Politécnico de Viseu</li>
+        <li>Instituto Politécnico de Braga</li>
+      </ul>
+      
+    </div>
+
+    <button class="save-btn">Salvar</button>
+  </div>
+</div>
+
+<div id="popup-container">
+  <div id="popup" class="hidden">
+    <p style="color:white">Alterações Guardadas</p>
+  </div>
+</div>
+<!-- Script para chamar a função setupDropdown() após o carregamento do documento -->
+<script src="profile.js"></script>
 </body>
 </html>
