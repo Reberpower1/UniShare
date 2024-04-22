@@ -6,13 +6,15 @@ const multer  = require('multer');
 
 const upload = multer({ dest: 'uploads/' });
 const app = express();
+const files_path = "../Uni_Share/Site"
+const port = 3000;
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.static('/Users/diogo/Documents/SHIFT/SHIFT 24/Uni_Share_pete/Site'));
+app.use(express.static(files_path));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 app.get('/', function (req, res) {
-  res.sendFile('/Users/diogo/Documents/SHIFT/SHIFT 24/Uni_Share_pete/Site/index.html');
+  res.sendFile(files_path + '/index.html');
 });
 
 // Array com os Users
@@ -41,7 +43,7 @@ app.post('/registo', upload.single('profilepic'), function (req, res) {
   users.push(user);
   //Mostrar users e redirecionar
   console.log(users);
-  res.sendFile('/Users/diogo/Documents/SHIFT/SHIFT 24/Uni_Share_pete/Site/index.html');
+  res.sendFile(files_path + 'index.html');
 });
 
 //Sessão do código para a parte de Entrar
@@ -82,6 +84,6 @@ app.get('/user', function (req, res) {
 });
 //Port 3000 para o localhost
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log('Server started on port 3000');
 });
