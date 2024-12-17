@@ -1,0 +1,33 @@
+services:
+  db:
+    image: mongo:6.0.13
+    container_name: unishare-database
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - ${MONGO_PORT}:27017
+    volumes:
+      - database:/data/db
+    healthcheck:
+      test: ["CMD","mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 2s
+      timeout: 10s
+      retries: 5
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: unishare-api
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file:
+      - .env
+    ports:
+      - ${API_PORT}:${API_PORT}
+    command: npm run dev
+
+volumes:
+  database:
