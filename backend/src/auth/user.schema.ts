@@ -8,6 +8,8 @@ export class User extends Document {
 
     @Prop({ required: true })
     password: string;
+
+    __v?: number;
 }
 
 export const UserSchema = SchemaFactory.createForClass(User);

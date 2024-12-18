@@ -1,4 +1,4 @@
-import { Controller, Post, Body } from '@nestjs/common';
+import { Controller, Get, Post, Body, Session } from '@nestjs/common';
 import { AuthService } from './auth.service';
 
 @Controller('auth')
@@ -23,7 +23,13 @@ export class AuthController {
         if (!isValid) {
             return { message: 'Credenciais inválidas' };
         }
-        console.log(`Usuário '${username}' autenticado com sucesso.`);
+        console.log(`Utilizador '${username}' autenticado com sucesso.`);
         return { message: 'Sessão iniciada com sucesso' };
+    }
+
+    @Get('')
+    async getAuthSession(@Session() session: Record<string, any>) {
+        console.log(session);
+        console.log(session.id);
     }
 }
