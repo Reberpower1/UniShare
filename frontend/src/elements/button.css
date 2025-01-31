@@ -1,0 +1,16 @@
+/* /components/Button.css */
+@import "../variables/variables.css"; /* Import the variables file */
+
+.button {
+  background-color: var(--whiteColor05) ; /* Correct variable usage */
+  color: var(--whiteColor01);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button:hover {
+  background-color: var(--blackColor02);
+}
